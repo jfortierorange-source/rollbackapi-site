@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>SecretsAPI — Credential Access Infrastructure for AI Agents and Autonomous Workloads</title>
+    <meta name="description" content="SecretsAPI is credential access infrastructure for AI agents and autonomous workloads. It brokers scoped, time-limited access to API keys, tokens, and database credentials — workloads receive ephemeral tokens, never raw credentials. Policy-controlled, audit-logged, and deployable within your VPC." />
+    <meta name="keywords" content="credential access infrastructure, AI agent credentials, secret-brokering infrastructure, credential brokering, scoped access tokens, autonomous workload security, AI agent secret management, policy-controlled credential access, ephemeral token issuance, enterprise AI infrastructure security" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://secretsapi.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://secretsapi.com/" />
+    <meta property="og:title" content="SecretsAPI — Credential Access Infrastructure for AI Agents" />
+    <meta property="og:description" content="SecretsAPI brokers scoped, time-limited credential access for AI agents and autonomous workloads. Workloads receive ephemeral tokens — never raw API keys or database credentials." />
+    <meta property="og:site_name" content="SecretsAPI" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SecretsAPI — Credential Access Infrastructure for AI Agents" />
+    <meta name="twitter:description" content="SecretsAPI brokers scoped, time-limited credential access for AI agents. Workloads receive ephemeral tokens — never raw API keys or credentials." />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://secretsapi.com/#webpage",
+          "url": "https://secretsapi.com/",
+          "name": "SecretsAPI — Credential Access Infrastructure for AI Agents and Autonomous Workloads",
+          "description": "SecretsAPI is credential access infrastructure for AI agents and autonomous workloads. It brokers scoped, time-limited access to secrets and credentials without exposing raw values to the requesting workload.",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#what-is-secretsapi", "#how-it-works", "#faq"]
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://secretsapi.com/#software",
+          "name": "SecretsAPI",
+          "alternateName": ["Secret Access Infrastructure", "Credential Brokering Infrastructure", "AI Agent Credential Broker"],
+          "applicationCategory": "SecurityApplication",
+          "applicationSubCategory": "Credential Access Infrastructure",
+          "description": "SecretsAPI is credential access infrastructure for AI agents, service principals, and autonomous workloads. It operates as a policy-evaluating brokering layer: when a workload requests a named credential, SecretsAPI evaluates the request against a per-principal access policy and issues a scoped, time-limited token. The raw credential never leaves the vault. Every access event is written to a cryptographically signed, append-only audit log.",
+          "operatingSystem": "Cloud, VPC, On-Premises",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "SecretsAPI" }
+          },
+          "featureList": [
+            "Credential brokering — workloads receive scoped tokens, never raw credentials",
+            "Scoped token issuance — tokens are bounded to one resource and operation",
+            "Per-principal, per-resource access policy evaluation at request time",
+            "Ephemeral tokens with configurable TTL from 15 seconds to 24 hours",
+            "Cryptographically signed, append-only audit log per access event",
+            "Approval hold workflow for requests exceeding risk threshold",
+            "VPC deployment with private link — no shared credential infrastructure",
+            "Native connectors for Stripe, AWS, PostgreSQL, OpenAI, Slack, GitHub"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://secretsapi.com/#organization",
+          "name": "SecretsAPI",
+          "url": "https://secretsapi.com",
+          "description": "SecretsAPI builds credential access infrastructure for enterprise AI and autonomous workload deployments.",
+          "knowsAbout": [
+            "Credential access infrastructure",
+            "AI agent security",
+            "Secret-brokering infrastructure",
+            "Scoped token issuance",
+            "Autonomous workload access control",
+            "Enterprise AI infrastructure"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://secretsapi.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is SecretsAPI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SecretsAPI is credential access infrastructure for AI agents and autonomous workloads. It operates as a policy-evaluating brokering layer between workloads and credential storage: when a service principal requests a named credential, SecretsAPI evaluates the request against a per-principal access policy and issues a scoped, time-limited token. The raw credential never leaves the vault. Every access event — granted, denied, or held for operator approval — is written to a cryptographically signed, append-only audit log."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is secret-brokering infrastructure?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Secret-brokering infrastructure is the layer between workloads and credential storage that intercepts credential access requests, evaluates them against access policies, and issues scoped, time-limited tokens — rather than returning raw credential values. The workload receives a token that proves authorization to a specific operation for a bounded time. The underlying credential stays in the vault and is never transmitted to the requesting workload. SecretsAPI is a secret-brokering infrastructure product built for AI agents and autonomous systems."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is credential brokering for AI agents?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Credential brokering for AI agents means the agent never holds a raw API key, database password, or OAuth token. Instead, the agent requests access by name and required scope. SecretsAPI evaluates the request against the agent's access policy and issues a scoped, ephemeral token — valid for one operation, bounded by a short TTL. The token expires automatically. Every access event is logged. This limits the blast radius if an agent is compromised: only the current token is exposed, not the underlying credential."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is SecretsAPI different from HashiCorp Vault or AWS Secrets Manager?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HashiCorp Vault and AWS Secrets Manager are credential storage systems — they store credentials and provide retrieval APIs, but the workload still receives the raw credential value. SecretsAPI is a credential access layer that sits above storage: workloads never retrieve raw credentials. They receive scoped, time-limited tokens evaluated against access policies at request time. SecretsAPI can integrate with Vault or AWS KMS as the underlying key store, adding policy enforcement, scoped token issuance, and per-event audit logging on top."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why should AI agents not hold raw API keys or credentials?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Raw credentials in workload context are an uncontrolled access surface. A Stripe API key grants access to every Stripe operation — charges, refunds, payouts, and customer mutations — not just the one operation the agent requires. If the agent is compromised, misconfigured, or acts outside its intended scope, the raw credential allows unrestricted access until manually rotated. SecretsAPI ensures every credential access is scoped to the exact operation requested, time-bounded, policy-evaluated, and audited."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens when an AI agent using SecretsAPI is compromised?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If a workload using SecretsAPI is compromised, the blast radius is limited to the current token — scoped to a single operation and expiring within a short TTL. There is no persistent raw credential to exfiltrate. The compromised principal can be immediately revoked, blocking all future access requests. The audit log provides a complete reconstruction: every resource requested, every scope granted, every system reached, attributable to that principal by identity and timestamp."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What credential types does SecretsAPI support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SecretsAPI supports API keys, OAuth tokens, database credentials (PostgreSQL, MySQL), AWS IAM credentials and role assumption via STS, and arbitrary key-value secrets. Native connectors cover Stripe, AWS, PostgreSQL, OpenAI, Slack, and GitHub. A generic connector handles any system not on that list."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does SecretsAPI handle compliance and audit requirements?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SecretsAPI writes a cryptographically signed, append-only audit log entry for every credential access event — regardless of outcome. Each entry contains principal identity, requested resource, requested scope, policy verdict, granted scope (if applicable), token expiry, and ISO 8601 timestamp. Entries are HMAC-SHA256 signed at write time. The log is designed to produce evidence for access control audit requirements. No vendor certification is claimed — the intent is to make the buyer's compliance audit defensible."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does SecretsAPI deploy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SecretsAPI deploys as a single-tenant instance within the customer's VPC (AWS, GCP, or Azure). Connectivity is via private link — no public endpoint is required. Secrets are encrypted at rest with AES-256-GCM using customer-managed keys via AWS KMS, GCP KMS, or HashiCorp Vault. Time from contract to production deployment is typically 2–4 weeks."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
